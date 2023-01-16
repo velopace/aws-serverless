@@ -1,0 +1,15 @@
+AWS Lambda CloudWatch Logs using AWS CLI
+
+1- Get the log group name:
+aws logs describe-log-groups \
+--query 'logGroups[*].logGroupName'
+
+2- List the log streams for that log group:
+aws logs describe-log-streams \
+--log-group-name '/aws/lambda/test-function2' \
+--query 'logStreams[*].logStreamName'
+
+3- Get the log events for that stream:
+aws logs get-log-events \
+--log-group-name '/aws/lambda/test-function2' \
+--log-stream-name '2023/01/16/[$LATEST]52dbdc3532604de6bb9bc46a91bcee5a'

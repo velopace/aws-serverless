@@ -1,11 +1,12 @@
 Create AWS Lambda function with .zip file using AWS CLI
 
-Get Role:
+1. Get Role:
 aws iam get-role --role-name lambda-ex
 
-Zip file:
+2. Zip file:
 zip function.zip index.mjs
 
+3.
 aws lambda create-function \
   --function-name test-function2 \
   --runtime nodejs18.x \
