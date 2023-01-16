@@ -1,16 +1,24 @@
-// json payload
+Invoking Lambda functions with the AWS CLI
+
+-------
+json payload
+
 aws lambda invoke \
 --function-name test-function json-payload-response.json \
 --cli-binary-format raw-in-base64-out \
 --payload '{"key": "value"}'
 
-// file payload
+-------
+file payload
+
 aws lambda invoke \
 --function-name test-function file-payload-response.json \
 --cli-binary-format raw-in-base64-out \
 --payload file://event.json
 
-// with logs
+-------
+retrieve a log ID
+
 aws lambda invoke \
 --function-name test-function with-logs-response.json \
 --log-type Tail \
