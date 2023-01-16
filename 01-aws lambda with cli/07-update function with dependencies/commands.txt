@@ -1,0 +1,29 @@
+Update AWS Lambda Function Code using AWS CLI
+
+---
+1- Install required Dependencies
+
+npm install aws-xray-sdk
+
+---
+2- zip function code
+
+zip function.zip index.mjs node_modules package.json package-lock.json
+
+---
+3- update function code
+
+Run Command:
+
+aws lambda update-function-code \
+    --function-name test-function2 \
+    --zip-file fileb://function.zip
+
+---
+4- invoke updated lambda function
+
+aws lambda invoke \
+	--function-name test-function2 \
+	--cli-binary-format raw-in-base64-out \
+	--payload file://event.json \
+	response.json
