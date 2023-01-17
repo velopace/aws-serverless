@@ -1,0 +1,35 @@
+E2E Test REST API and Lambda Function with Incoming REST API Event Json Object
+---
+
+GET
+https://c1cvbbqw4l.execute-api.us-east-1.amazonaws.com/prod/product
+{
+    "message": "Successfully finished operation: \"GET\"",
+    "body": "Processing Get All Products"
+}
+
+GET by ID
+https://c1cvbbqw4l.execute-api.us-east-1.amazonaws.com/prod/product/343
+{
+    "message": "Successfully finished operation: \"GET\"",
+    "body": "Processing Get Product Id with \"343\""
+}
+
+POST
+https://c1cvbbqw4l.execute-api.us-east-1.amazonaws.com/prod/product
+payload:
+{
+    "name":"IPhone",
+    "price":"900"
+}
+{
+    "message": "Successfully finished operation: \"POST\"",
+    "body": "Processing Post Product with \"[object Object]\""
+}
+
+DELETE
+https://c1cvbbqw4l.execute-api.us-east-1.amazonaws.com/prod/product/343
+{
+    "message": "Successfully finished operation: \"DELETE\"",
+    "body": "Processing Delete Product Id with \"343\""
+}
