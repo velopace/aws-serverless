@@ -1,0 +1,81 @@
+{
+  "headers": {
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "en-US,en;q=0.9,ko;q=0.8",
+      "Cache-Control": "no-cache",
+      "Host": "1ya6hz9wqg.execute-api.us-east-1.amazonaws.com",
+      "Origin": "https://www.piesocket.com",
+      "Pragma": "no-cache",
+      "Sec-WebSocket-Extensions": "permessage-deflate; client_max_window_bits",
+      "Sec-WebSocket-Key": "/2kgz0mFZaxRZGalezp0aw==",
+      "Sec-WebSocket-Version": "13",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",
+      "X-Amzn-Trace-Id": "Root=1-63c72441-7f3d64aa5eccad3e373df04e",
+      "X-Forwarded-For": "167.88.61.117",
+      "X-Forwarded-Port": "443",
+      "X-Forwarded-Proto": "https"
+  },
+  "multiValueHeaders": {
+      "Accept-Encoding": [
+          "gzip, deflate, br"
+      ],
+      "Accept-Language": [
+          "en-US,en;q=0.9,ko;q=0.8"
+      ],
+      "Cache-Control": [
+          "no-cache"
+      ],
+      "Host": [
+          "1ya6hz9wqg.execute-api.us-east-1.amazonaws.com"
+      ],
+      "Origin": [
+          "https://www.piesocket.com"
+      ],
+      "Pragma": [
+          "no-cache"
+      ],
+      "Sec-WebSocket-Extensions": [
+          "permessage-deflate; client_max_window_bits"
+      ],
+      "Sec-WebSocket-Key": [
+          "/2kgz0mFZaxRZGalezp0aw=="
+      ],
+      "Sec-WebSocket-Version": [
+          "13"
+      ],
+      "User-Agent": [
+          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
+      ],
+      "X-Amzn-Trace-Id": [
+          "Root=1-63c72441-7f3d64aa5eccad3e373df04e"
+      ],
+      "X-Forwarded-For": [
+          "167.88.61.117"
+      ],
+      "X-Forwarded-Port": [
+          "443"
+      ],
+      "X-Forwarded-Proto": [
+          "https"
+      ]
+  },
+  "requestContext": {
+      "routeKey": "$connect",
+      "eventType": "CONNECT",
+      "extendedRequestId": "e6KaOFEMoAMFUAQ=",
+      "requestTime": "17/Jan/2023:22:42:09 +0000",
+      "messageDirection": "IN",
+      "stage": "production",
+      "connectedAt": 1673995329189,
+      "requestTimeEpoch": 1673995329213,
+      "identity": {
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",
+          "sourceIp": "167.88.61.117"
+      },
+      "requestId": "e6KaOFEMoAMFUAQ=",
+      "domainName": "1ya6hz9wqg.execute-api.us-east-1.amazonaws.com",
+      "connectionId": "e6KaNeoUIAMCKzg=",
+      "apiId": "1ya6hz9wqg"
+  },
+  "isBase64Encoded": false
+}

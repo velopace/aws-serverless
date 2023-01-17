@@ -3,7 +3,7 @@ Update AWS Lambda Function Code using AWS CLI
 ---
 1- zip function code
 
-zip function.zip index.mjs
+zip -r function.zip index.mjs
 
 ---
 2- update function code

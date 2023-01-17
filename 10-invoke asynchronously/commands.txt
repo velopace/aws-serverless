@@ -3,7 +3,7 @@ AWS Lambda Asynchronous Invocation using AWS CLI
 ---
 Create lambda
 
-zip function.zip index.mjs
+zip -r function.zip index.mjs
 aws iam get-role --role-name lambda-ex
 
 aws lambda create-function \

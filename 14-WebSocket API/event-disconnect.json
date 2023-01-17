@@ -1,0 +1,43 @@
+{
+  "headers": {
+      "Host": "1ya6hz9wqg.execute-api.us-east-1.amazonaws.com",
+      "x-api-key": "",
+      "X-Forwarded-For": "",
+      "x-restapi": ""
+  },
+  "multiValueHeaders": {
+      "Host": [
+          "1ya6hz9wqg.execute-api.us-east-1.amazonaws.com"
+      ],
+      "x-api-key": [
+          ""
+      ],
+      "X-Forwarded-For": [
+          ""
+      ],
+      "x-restapi": [
+          ""
+      ]
+  },
+  "requestContext": {
+      "routeKey": "$disconnect",
+      "disconnectStatusCode": 1005,
+      "eventType": "DISCONNECT",
+      "extendedRequestId": "e6KrWGExoAMFvow=",
+      "requestTime": "17/Jan/2023:22:43:58 +0000",
+      "messageDirection": "IN",
+      "disconnectReason": "Client-side close frame status not set",
+      "stage": "production",
+      "connectedAt": 1673995329189,
+      "requestTimeEpoch": 1673995438817,
+      "identity": {
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",
+          "sourceIp": "167.88.61.117"
+      },
+      "requestId": "e6KrWGExoAMFvow=",
+      "domainName": "1ya6hz9wqg.execute-api.us-east-1.amazonaws.com",
+      "connectionId": "e6KaNeoUIAMCKzg=",
+      "apiId": "1ya6hz9wqg"
+  },
+  "isBase64Encoded": false
+}

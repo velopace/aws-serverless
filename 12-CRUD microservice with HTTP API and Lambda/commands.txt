@@ -5,7 +5,7 @@ zip function code
 
 Run Command:
 
-zip function.zip index.mjs
+zip -r function.zip index.mjs
 
 update function code
 

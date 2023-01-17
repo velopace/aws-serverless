@@ -1,0 +1,62 @@
+Develop Lambda Function for Incoming WebSocket API Event Json Object
+
+---
+1- zip function code
+
+zip -r function.zip index.mjs node_modules/* package.json package-lock.json
+
+2- update function code
+
+Run Command:
+
+aws lambda update-function-code \
+    --function-name test-function \
+    --zip-file fileb://function.zip
+
+---
+WebSocket URL: wss://1ya6hz9wqg.execute-api.us-east-1.amazonaws.com/production
+Connection URL: https://1ya6hz9wqg.execute-api.us-east-1.amazonaws.com/production/@connections
+
+$connect
+- Connecting to: wss://1ya6hz9wqg.execute-api.us-east-1.amazonaws.com/production
+- Connection Established
+
+sendMessage
+{
+	"action": "sendMessage",
+	"message": "Hello from websocket chat app !"
+}
+"{\"action\": \"sendMessage\", \t\"message\": \"Hello from websocket chat app !\" }"
+
+$default
+
+---
+SDK DOCUMENT:
+https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/ApiGatewayManagementApi.html
+
+---
+Add Required Permission
+If you don't add required permission, you will get AccessDeniedException ERROR.
+
+2023-01-17T23:30:29.154Z	a4069d86-871a-4057-8c15-cefce88f7766	ERROR	AccessDeniedException: User: arn:aws:sts::704358853338:assumed-role/test-function-role-fy6b3bvx/test-function is not authorized to perform: execute-api:ManageConnections on resource: arn:aws:execute-api:us-east-1:********3338:1ya6hz9wqg/production/POST/@connections/{connectionId}
+    at Object.extractError (/var/task/node_modules/aws-sdk/lib/protocol/json.js:52:27)
+    at Request.extractError (/var/task/node_modules/aws-sdk/lib/protocol/rest_json.js:61:8)
+    at Request.callListeners (/var/task/node_modules/aws-sdk/lib/sequential_executor.js:106:20)
+    at Request.emit (/var/task/node_modules/aws-sdk/lib/sequential_executor.js:78:10)
+    at Request.emit (/var/task/node_modules/aws-sdk/lib/request.js:686:14)
+    at Request.transition (/var/task/node_modules/aws-sdk/lib/request.js:22:10)
+    at AcceptorStateMachine.runTo (/var/task/node_modules/aws-sdk/lib/state_machine.js:14:12)
+    at /var/task/node_modules/aws-sdk/lib/state_machine.js:26:10
+    at Request.<anonymous> (/var/task/node_modules/aws-sdk/lib/request.js:38:9)
+    at Request.<anonymous> (/var/task/node_modules/aws-sdk/lib/request.js:688:12) {
+  code: 'AccessDeniedException',
+  time: 2023-01-17T23:30:29.133Z,
+  requestId: '05c2327a-80b2-4b7b-8f61-429a5df214fa',
+  statusCode: 403,
+  retryable: false,
+  retryDelay: 32.02771346996658
+}
+
+Attach AmazonAPIGatewayInvokeFullAccess to existing Lambda function role
+
+Responding sendMessage with "Hello from websocket chat app !"

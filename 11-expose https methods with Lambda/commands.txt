@@ -4,7 +4,7 @@ Single Calculator Microservice Expose https methods with Lambda Function Url
 1- zip function code
 
 Run Command:
-	zip function.zip index.mjs
+	zip -r function.zip index.mjs
 
 ---
 2- create lambda function with cli
