@@ -1,0 +1,8 @@
+AWS Lambda Environment Variables
+
+Configuring environment variables with the API
+aws lambda update-function-configuration --function-name test-function \
+    --environment "Variables={BUCKET=my-bucket,KEY=file.txt}"
+
+Run Command:
+aws lambda get-function-configuration --function-name test-function
