@@ -1,0 +1,65 @@
+Single Calculator Microservice Expose https methods with Lambda Function Url
+
+---
+1- zip function code
+
+Run Command:
+	zip function.zip index.mjs
+
+---
+2- create lambda function with cli
+
+Get Role:
+aws iam get-role --role-name lambda-ex
+
+Get role arn:
+"Arn": "arn:aws:iam::704358853338:role/lambda-ex"
+
+Run Command:
+aws lambda create-function \
+    --function-name calculator \
+    --runtime nodejs18.x \
+    --zip-file fileb://function.zip \
+    --handler index.handler \
+    --role arn:aws:iam::704358853338:role/lambda-ex
+
+---
+3- Create Function url config with cli			
+
+Run Command:
+aws lambda create-function-url-config \
+    --function-name calculator \
+    --auth-type NONE
+
+Response:
+{
+    "FunctionUrl": "https://6xzfukurt3v7pnm65fmaouczly0nbnyk.lambda-url.us-east-1.on.aws/",
+    "FunctionArn": "arn:aws:lambda:us-east-1:704358853338:function:calculator",
+    "AuthType": "NONE",
+    "CreationTime": "2023-01-17T14:02:08.630624Z"
+}
+
+---
+4- invoke lambda function with postman
+
+POSTMAN
+Header content -  -H 'content-type: application/json' \
+payload
+    body -raw - json
+
+    {
+      "a": 2,
+      "b": 5,
+      "op": "+"
+    }
+
+send request
+POST
+https://6xzfukurt3v7pnm65fmaouczly0nbnyk.lambda-url.us-east-1.on.aws/
+Response:
+{
+    "Message": "Forbidden"
+}
+
+GRANT Permission:
+grants lambda:invokeFunctionUrl permissions
