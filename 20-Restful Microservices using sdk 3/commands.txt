@@ -1,0 +1,65 @@
+---
+1- zip function code
+
+zip -r function.zip node_modules ddb-client.mjs index.mjs package.json package-lock.json
+
+2- update function code
+
+Run Command:
+
+aws lambda update-function-code \
+    --function-name product-function \
+    --zip-file fileb://function.zip
+
+
+Test - RESTful Microservices with AWS Lambda, Api Gateway and DynamoDb
+---
+
+GET
+https://0sluiyq5bh.execute-api.us-east-1.amazonaws.com/prod/product
+
+{
+    "message": "Successfully finished operation: \"GET\"",
+    "body": []
+}
+
+POST
+https://0sluiyq5bh.execute-api.us-east-1.amazonaws.com/prod/product
+
+{
+  "name": "IPhone X",
+  "description": "This phone is the company's biggest change to its flagship smartphone in years. It includes a borderless.",
+  "imageFile": "product-1.png",
+  "category": "Phone",
+  "price": 950.4
+}
+
+{
+    "message": "Successfully finished operation: \"POST\"",
+    "body": {
+        "$metadata": {
+            "httpStatusCode": 200,
+            "requestId": "7LB6BGO5576JUIKHKUHREVER03VV4KQNSO5AEMVJF66Q9ASUAAJG",
+            "attempts": 1,
+            "totalRetryDelay": 0
+        }
+    }
+}
+
+GET
+https://9wizfu07f0.execute-api.us-east-1.amazonaws.com/prod/product/1
+
+
+{
+    "Item": {
+        "description": "This is an IPhone",
+        "id": "1",
+        "price": 900,
+        "title": "IPhone"
+    }
+}
+
+DELETE
+https://9wizfu07f0.execute-api.us-east-1.amazonaws.com/prod/product/1
+
+"Deleted product 1"

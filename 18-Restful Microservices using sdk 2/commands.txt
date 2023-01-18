@@ -1,0 +1,46 @@
+---
+1- zip function code
+
+zip -r function.zip index.mjs node_modules package.json package-lock.json
+
+2- update function code
+
+Run Command:
+
+aws lambda update-function-code \
+    --function-name product-function \
+    --zip-file fileb://function.zip
+
+
+Test - RESTful Microservices with AWS Lambda, Api Gateway and DynamoDb
+---
+
+POST
+https://9wizfu07f0.execute-api.us-east-1.amazonaws.com/prod/product
+
+{
+	"id": "1",    
+  "title": "IPhone",
+  "description": "This is an IPhone",
+  "price": 900
+}
+
+"Added/Updated product 1"
+
+GET
+https://9wizfu07f0.execute-api.us-east-1.amazonaws.com/prod/product/1
+
+
+{
+    "Item": {
+        "description": "This is an IPhone",
+        "id": "1",
+        "price": 900,
+        "title": "IPhone"
+    }
+}
+
+DELETE
+https://9wizfu07f0.execute-api.us-east-1.amazonaws.com/prod/product/1
+
+"Deleted product 1"
