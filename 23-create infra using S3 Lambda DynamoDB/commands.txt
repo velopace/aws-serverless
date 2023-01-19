@@ -1,0 +1,18 @@
+Create Infrasturcture for Amazon S3, AWS Lambda and DynamoDB
+---
+Create S3 Bucket
+
+Create Lambda Function
+Add Trigger to S3, Event Type: PUT
+Permission: Simple Microservice Permissions (DynamoDB), Amazon S3 object read-only permissions
+
+Create DynamoDB Table
+
+
+Develop Lambda Function for async invocation from Amazon S3
+---
+Develop Lambda Function:
+we will have 2 interactions
+    - get bucket detail from S3
+      In order to get bucket object list, should attatch AmazonS3ReadOnlyAccess policy that contains s3-object-lambda:List* action.
+    - write dynamodb table
