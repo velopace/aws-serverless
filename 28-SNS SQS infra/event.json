@@ -1,0 +1,21 @@
+{
+    "Records": [
+        {
+            "messageId": "0722ccd2-a0dd-4601-a7be-53690235ff0d",
+            "receiptHandle": "AQEBPJPUv4Vu6k/lirt4y0mdieCp4TkY3voeP0woSHIFsLL+ih3IvuCVAKHdVm1eWNxqJjMD5Vlp/wg0qH82dplxA4xnwssCky+7gOV/NPbjUPLued7SBoecAdJh5MLi5wUSNSw9OVoT0VCmvY5dqieQl2rB27s+JGX6RxXBXoBjCydOF2Z73bhlMGhDmkd6JUxiP5PDp+Ppm8EvXGT69PNussNfRgLZrtPFYwP+Z5/JU7OZk0GWuJLLWpu4RV9CvZDINIPC7GCkHvzorAPVJFy1H1nW+6O0+W6aTf+6zScA5QuC+MxMa0W8+W2J69s3eM5piNF83KpILJtE8VYcz0wiXvHaq9kO5m1RL1FY6dAsOWe4jN5R9o1JxqpG0M3brALlCgKeFDxN/ERGIUiqPogXVw==",
+            "body": "{\n  \"Type\" : \"Notification\",\n  \"MessageId\" : \"2901a618-d737-5ac8-8978-fa7bef2f36a1\",\n  \"TopicArn\" : \"arn:aws:sns:us-east-1:704358853338:OrderTopic\",\n  \"Subject\" : \"order_placed\",\n  \"Message\" : \"{\\n  \\\"item\\\":\\\"iphone\\\",\\n   \\\"status\\\":\\\"CREATED\\\",\\n   \\\"type\\\":\\\"SHIP_REQUIRED\\\"\\n}\",\n  \"Timestamp\" : \"2023-02-12T18:54:16.325Z\",\n  \"SignatureVersion\" : \"1\",\n  \"Signature\" : \"MwpIDKcv2JnmEdQUbRz4NgJqjUllIjoRJm/Rcjtz3G6BziwwHyx3QF7d5uXUlyCqGQcqSEV4FGd7v7UCdQIzW6q1G7Gg0c87xRCAZynkNSLeHp5iS7TGGNlZzArvPZSbyR5CzpOIPOOCVPTns0cn2i8ffQh4jDpl9nRX8M05iTr/5sOQY3YVIc3e8gkjVS0fSFFazK+j2X8KYEfJyAzk/ewntvIXHl3O0GgLM8pKfaIxjw6I7twyOcCau9INIaRmMt9ZZeaLVewH6SNL39pqlmC0Dbuw3KSTtMSYX27QUKSLLulfiAwPVQbWMdc1MNdIlA0jvXUbumfCaGKliF2QYw==\",\n  \"SigningCertURL\" : \"https://sns.us-east-1.amazonaws.com/SimpleNotificationService-56e67fcb41f6fec09b0196692625d385.pem\",\n  \"UnsubscribeURL\" : \"https://sns.us-east-1.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=arn:aws:sns:us-east-1:704358853338:OrderTopic:99ebe8e7-2d92-4c4c-b16e-63372a9ae822\"\n}",
+            "attributes": {
+                "ApproximateReceiveCount": "1",
+                "AWSTraceHeader": "Root=1-63e935d7-607154fff64305792064fb71;Sampled=1",
+                "SentTimestamp": "1676228056355",
+                "SenderId": "AIDAIT2UOQQY3AUEKVGXU",
+                "ApproximateFirstReceiveTimestamp": "1676228056364"
+            },
+            "messageAttributes": {},
+            "md5OfBody": "989b88a866b42385729cf731916eb669",
+            "eventSource": "aws:sqs",
+            "eventSourceARN": "arn:aws:sqs:us-east-1:704358853338:notification-queue",
+            "awsRegion": "us-east-1"
+        }
+    ]
+}
