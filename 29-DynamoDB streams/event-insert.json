@@ -1,0 +1,37 @@
+{
+    "Records": [
+        {
+            "eventID": "ca6c8c16296deb53b02ae582b9d6cf1e",
+            "eventName": "INSERT",
+            "eventVersion": "1.1",
+            "eventSource": "aws:dynamodb",
+            "awsRegion": "us-east-1",
+            "dynamodb": {
+                "ApproximateCreationDateTime": 1676234812,
+                "Keys": {
+                    "id": {
+                        "S": "1"
+                    }
+                },
+                "NewImage": {
+                    "date": {
+                        "S": "02/12/2023"
+                    },
+                    "name": {
+                        "S": "iphone order"
+                    },
+                    "id": {
+                        "S": "1"
+                    },
+                    "status": {
+                        "S": "IN_PROGRESS"
+                    }
+                },
+                "SequenceNumber": "4300000000027022686504",
+                "SizeBytes": 53,
+                "StreamViewType": "NEW_AND_OLD_IMAGES"
+            },
+            "eventSourceARN": "arn:aws:dynamodb:us-east-1:704358853338:table/order/stream/2023-02-12T20:39:30.951"
+        }
+    ]
+}

@@ -1,0 +1,51 @@
+{
+    "Records": [
+        {
+            "eventID": "a790c5c06e84a95362885c00248ce788",
+            "eventName": "MODIFY",
+            "eventVersion": "1.1",
+            "eventSource": "aws:dynamodb",
+            "awsRegion": "us-east-1",
+            "dynamodb": {
+                "ApproximateCreationDateTime": 1676234934,
+                "Keys": {
+                    "id": {
+                        "S": "1"
+                    }
+                },
+                "NewImage": {
+                    "date": {
+                        "S": "02/12/2023"
+                    },
+                    "name": {
+                        "S": "iphone order"
+                    },
+                    "id": {
+                        "S": "1"
+                    },
+                    "status": {
+                        "S": "SHIPMENT"
+                    }
+                },
+                "OldImage": {
+                    "date": {
+                        "S": "02/12/2023"
+                    },
+                    "name": {
+                        "S": "iphone order"
+                    },
+                    "id": {
+                        "S": "1"
+                    },
+                    "status": {
+                        "S": "IN_PROGRESS"
+                    }
+                },
+                "SequenceNumber": "4400000000027022787775",
+                "SizeBytes": 100,
+                "StreamViewType": "NEW_AND_OLD_IMAGES"
+            },
+            "eventSourceARN": "arn:aws:dynamodb:us-east-1:704358853338:table/order/stream/2023-02-12T20:39:30.951"
+        }
+    ]
+}
