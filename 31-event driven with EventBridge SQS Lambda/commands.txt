@@ -1,0 +1,123 @@
+Create Infrastructure for Event-Driven Microservice Architecture with EventBridge, SQS and Lambda
+---
+We will create
+	api gateway
+	basket ms lambda function
+	eventbridge custom event bus
+	sqs - order queue
+	order ms lambda function	
+	notification ms lambda function
+
+---
+Required Permission for Basket ms:
+
+EventBridge
+	events:PutEvents
+
+Commands :
+	PutEventsCommand
+
+IAM Policy:
+	AmazonEventBridgeFullAccess
+
+---
+Required Permissions for Basket and Order:
+
+Basket microservices
+	EventBridge:PutEvents
+
+Order microservices
+	SQS:Poll
+	DynamoDB:Put
+
+---
+Create 
+	Amazon EventBridge Customer Event Bus
+
+EventBridge has 3 main core concepts:
+	1- Custom event bus - CheckoutBasketEventBus
+	2- Event Rule with event pattern - CheckoutBasketRule
+	3- Targets - create SQS order queue and notification ms target for our custom event bus
+
+---
+Amazon EventBridge Custom EventBus:
+
+Event bus name:
+CheckoutBasketEventBus
+
+Rule name:
+CheckoutBasketRule
+
+Event Pattern:
+{
+  "detail-type": ["CheckoutBasket"],
+  "source": ["com.swn.basket.checkoutbasket"]
+}
+
+---
+Test with publish event message to Event Bridge Custom Bus:
+
+CheckoutBasketEventBus
+
+Send events
+
+Event source
+com.swn.basket.checkoutbasket
+
+detail-type
+CheckoutBasket
+
+Event detail
+{
+    "item":"iphone",
+    "price":"100"
+}
+
+---
+
+
+
+
+Test E2E - Hands-on Labs : Event-Driven Microservice Architecture Using Amazon EventBridge, SQS and Lambda
+---
+Test from Postman 
+	from Client -> API Gateway -> Basket -> EventBridge -> SQS -> order  -> dynamodb
+														-> notification
+
+---
+Send 2 type of request:
+
+Event bus name
+CheckoutBasketEventBus
+
+CheckoutBasketRule:
+Event pattern:
+{
+  "detail-type": ["CheckoutBasket"],
+  "source": ["com.swn.basket.checkoutbasket"]
+}
+
+NotificationRule: 
+Event pattern:
+{
+  "detail-type": ["Notification"],
+  "source": ["com.swn.basket.notification"]
+}
+---
+POST
+
+Payload 1 :
+{
+  "item":"iphone",
+  "price":150,
+  "detailtype":"CheckoutBasket",
+  "source": "com.swn.basket.checkoutbasket"
+}
+
+Payload 2 :
+{
+  "notify":"price update",
+  "price":200,
+  "detailtype":"Notification",
+  "source": "com.swn.basket.notification"
+}

@@ -1,0 +1,14 @@
+{
+    "version": "0",
+    "id": "3dedeb2c-e6ec-b5ba-3e8e-c79247659e5e",
+    "detail-type": "CheckoutBasket",
+    "source": "com.swn.basket.checkoutbasket",
+    "account": "704358853338",
+    "time": "2023-02-13T09:07:51Z",
+    "region": "us-east-1",
+    "resources": [],
+    "detail": {
+        "item": "iphone",
+        "price": "100"
+    }
+}

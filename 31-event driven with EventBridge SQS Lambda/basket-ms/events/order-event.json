@@ -1,0 +1,21 @@
+{
+    "Records": [
+        {
+            "messageId": "a5e5b89c-5712-40ef-9198-29e48ec9abfb",
+            "receiptHandle": "AQEBD1OgeQRUuLMW1qohlAXyz8ZelmOk/BgL+diqiUUUrTsBwm//GRpJAmUAdCPkCHWt25AibPsfzTLdXF3wePNjO8h0ywYlHWDA6OoJlPkg8w+Ggs7qMhAutVP2RQx13XMnmaHF6HfmX/lDu6Qh6hhin75jS/Nf+h+xtoNKdb7jIuNnsAjyyFRDxpyBOk9CHyN0H0/tjYKsaelc4isD3I6H2/NirnDEl1FbSvXmSBCXpj1npTZ2hgVYB7qfohNGop29jEK3TWfgh/DT6yA/kBAWkocDLSXbe8fSiPv5iNc32OBMUDPbX0SOH6T9w9gwhAvQPFSPbVaq1n/syc4dvcGoszsjkVKfsJYit+q/oR7/CmVvWG6+DrF/f4RV1WV2SPKm",
+            "body": "{\"version\":\"0\",\"id\":\"bf0f52fe-146c-d937-df49-1b59c2e9f427\",\"detail-type\":\"CheckoutBasket\",\"source\":\"com.swn.basket.checkoutbasket\",\"account\":\"704358853338\",\"time\":\"2023-02-13T09:54:59Z\",\"region\":\"us-east-1\",\"resources\":[],\"detail\":{\"item\":\"iphone\",\"price\":150,\"detailtype\":\"CheckoutBasket\",\"source\":\"com.swn.basket.checkoutbasket\"}}",
+            "attributes": {
+                "ApproximateReceiveCount": "1",
+                "AWSTraceHeader": "Root=1-63ea08f2-079d28c36de019f608780533;Parent=600f9b4f5dddf435;Sampled=0",
+                "SentTimestamp": "1676282099627",
+                "SenderId": "AIDAJXNJGGKNS7OSV23OI",
+                "ApproximateFirstReceiveTimestamp": "1676282099637"
+            },
+            "messageAttributes": {},
+            "md5OfBody": "47fe014684ca2c41fff700e3a33dab2c",
+            "eventSource": "aws:sqs",
+            "eventSourceARN": "arn:aws:sqs:us-east-1:704358853338:order-queue",
+            "awsRegion": "us-east-1"
+        }
+    ]
+}
